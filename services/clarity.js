@@ -88,6 +88,7 @@ async function executeJourney(isHeadless, launchPage, credentials) {
     
         const page = await browser.newPage();
         await page.setRequestInterception(true);
+        page.setDefaultNavigationTimeout(60000);
         page.on('request', interceptedRequest => {
             if (interceptedRequest.url().endsWith('.png') || 
                 interceptedRequest.url().endsWith('.jpg') ||
