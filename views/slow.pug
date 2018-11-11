@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  // register form
+  form(method='POST' action='/execute')
+    div.form-group
+      label(for='userid') Clarity user id:
+      input#userid.form-control(type='text', placeholder='Clarity login id' name='userid')
+    div.form-group
+      label(for='password') Clarity password:
+      input#password.form-control(type='text', placeholder='Clarity password' name='password')
+    button.btn.btn-primary(type='submit') Execute

@@ -4,20 +4,20 @@ block content
   h1= title
   p Welcome to #{title}
   // register form
-  form(method='POST' action='/execute')
-    div.form-group
-      label(for='indexPage') Application:
-      input#indexPage.form-control(type='text', placeholder='Url of application' name='indexPage')
+  form(method='POST' action='/execute-pool')
+    //- div.form-group
+    //-   label(for='indexPage') Application:
+    //-   input#indexPage.form-control(type='text', placeholder='Url of application' name='indexPage')
     div.form-group
       label(for='userid') Clarity user id:
       input#userid.form-control(type='text', placeholder='Clarity login id' name='userid')
     div.form-group
       label(for='password') Clarity password:
       input#password.form-control(type='text', placeholder='Clarity password' name='password')
-    div.form-group
-      label(for='mode') Select Mode:
-      select#mode.form-control(placeholder='Please select the mode' name='mode')
-        option(value='')#none Please select
-        option(value='Chrome')#Chrome Chrome
-        option(value='Headless')#Headless Headless
+    //- div.form-group
+    //-   label(for='mode') Select Mode:
+    //-   select#mode.form-control(placeholder='Please select the mode' name='mode')
+    //-     option(value='')#none Please select
+    //-     option(value='Chrome')#Chrome Chrome
+    //-     option(value='Headless')#Headless Headless
     button.btn.btn-primary(type='submit') Execute

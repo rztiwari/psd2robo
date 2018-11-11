@@ -7,8 +7,13 @@ var bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var BrowserPool = require('./services/BrowserPool');
 
 var app = express();
+
+let displayBrowser = process.argv[2] || false;
+
+BrowserPool.initializeBrowserPool(!displayBrowser, 'https://claritymobile.fs.capgemini.com/');
 
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
